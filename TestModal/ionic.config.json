@@ -1,0 +1,7 @@
+{
+  "name": "TestModal",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
