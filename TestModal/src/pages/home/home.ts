@@ -9,20 +9,19 @@ import { field, globalField } from '../../app/models';
 })
 export class HomePage {
 
-  fieldAll : field = new field;
+  fieldAll: field = new field;
   fieldUsage: field = new field;
-  
+
   constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
-
-  }
-
-  ionViewDidEnter() {
     this.fieldAll.name = 'fieldAll';
     this.fieldUsage.name = 'fieldUsage';
   }
 
-  presentModal(field:field) {
-    const modal = this.modalCtrl.create(ModalPage,{_field:field});
+  ionViewDidEnter() {
+  }
+
+  presentModal(field: field) {
+    const modal = this.modalCtrl.create(ModalPage, { _field: field });
     modal.present();
   }
 

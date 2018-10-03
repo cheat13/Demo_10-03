@@ -1,4 +1,4 @@
-import { field } from '../../app/models';
+import { field, globalField } from '../../app/models';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -29,7 +29,7 @@ export class ModalPage {
     this.fieldRecieve = this.navParams.data._field;
   }
 
-  confirm(){
+  confirm() {
     this.navCtrl.pop();
   }
 
