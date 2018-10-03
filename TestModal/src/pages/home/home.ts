@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import { ModalPage } from '../modal/modal';
+import { field, globalField } from '../../app/models';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +9,21 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  fieldAll : field = new field;
+  fieldUsage: field = new field;
+  
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
+  }
+
+  ionViewDidEnter() {
+    this.fieldAll.name = 'fieldAll';
+    this.fieldUsage.name = 'fieldUsage';
+  }
+
+  presentModal(field:field) {
+    const modal = this.modalCtrl.create(ModalPage,{_field:field});
+    modal.present();
   }
 
 }

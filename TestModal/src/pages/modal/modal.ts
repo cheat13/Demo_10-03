@@ -1,3 +1,4 @@
+import { field } from '../../app/models';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -15,11 +16,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ModalPage {
 
+  fieldRecieve: field = new field;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModalPage');
+  }
+
+  ionViewDidEnter() {
+    this.fieldRecieve = this.navParams.data._field;
+  }
+
+  confirm(){
+    this.navCtrl.pop();
   }
 
 }

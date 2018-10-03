@@ -1,13 +1,68 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>
-      Ionic Blank
+      Demo Modals
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  
+<ion-content style="background-color:lightgray;">
 
-  
+  <ion-card (click)="presentModal(fieldAll)">
+    <ion-card-header>
+      พื้นที่ทั้งหมด
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-grid style="text-align: center">
+        <ion-row>
+
+          <ion-col col-4>
+            <button ion-button outline block color="dark">{{fieldAll.rai}}</button>
+            <p>ไร่</p>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button outline block color="dark">{{fieldAll.ngan}}</button>
+            <p>งาน</p>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button outline block color="dark">{{fieldAll.sqWa}}</button>
+            <p>ตารางวา</p>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card (click)="presentModal(fieldUsage)">
+    <ion-card-header>
+      พื้นที่ที่ใช้งาน
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-grid style="text-align: center">
+        <ion-row>
+
+          <ion-col col-4>
+            <button ion-button outline block color="dark">{{fieldUsage.rai}}</button>
+            <p>ไร่</p>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button outline block color="dark">{{fieldUsage.ngan}}</button>
+            <p>งาน</p>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button outline block color="dark">{{fieldUsage.sqWa}}</button>
+            <p>ตารางวา</p>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+  </ion-card>
+
+
 </ion-content>
